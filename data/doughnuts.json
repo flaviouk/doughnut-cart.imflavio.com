@@ -1,0 +1,74 @@
+{
+  "doughnuts": [
+    {
+      "id": "strawberry-frosted",
+      "name": "Strawberry-Frosted Doughnut",
+      "description": "This was way too sweet, and had an incredibly artificial-tasting strawberry flavor, making it the Doughnut the loser of the classic Doughnuts. Though.",
+      "price": 1.00,
+      "url": "media/strawberry.jpg"
+    },
+    {
+      "id": "cinnamon-sugar",
+      "name": "Cinnamon-Sugar Doughnut",
+      "description": "While a great idea in theory, the ratio of cinnamon to sugar was way off here. This baby was overpowered by pure cinnamon, and NOT in a good way.",
+      "price": 1.20,
+      "url": "media/cinnamon.jpg"
+    },
+    {
+      "id": "jelly",
+      "name": "Jelly Doughnut",
+      "description": "One taster remarked that the jelly in this confection tasted like a pudding cup. With glops of fake-tasting jelly spilling.",
+      "price": 1.55,
+      "url": "media/jelly.jpg"
+    },
+    {
+      "id": "marble-frosted",
+      "name": "Marble-Frosted Doughnut",
+      "description": "A little chocolate, a little vanilla—a whole lotta sweet.",
+      "price": 2.00,
+      "url": "media/marble.jpg"
+    },
+    {
+      "id": "apple-crumb",
+      "name": "Apple-Crumb Doughnut",
+      "description": "Dunkin definitely nailed the apple flavor in this, though its more gas station apple pie than homemade.",
+      "price": 3.00,
+      "url": "media/apple.jpg"
+    },
+    {
+      "id": "blueberry",
+      "name": "Blueberry Doughnut",
+      "description": "While one of our tasters proclaimed this to be her absolute favorite.",
+      "price": 3.69,
+      "url": "media/blueberry.jpg"
+    },
+    {
+      "id": "chocolate-kreme-filled",
+      "name": "Chocolate Kreme-Filled Doughnut",
+      "description": "Chocolate frosting from a can, which we don't necessarily think is totally a bad thing",
+      "price": 6.66,
+      "url": "media/chocolate.jpg"
+    },
+    {
+      "id": "bavarian-kreme-filled",
+      "name": "Bavarian Kreme-Filled Doughnut",
+      "description": "We had low expectations for this one, but surprisingly it was inoffensive—not great, not terrible, mediocre to its cream-filled core.",
+      "price": 3.60,
+      "url": "media/bavarian.jpg"
+    },
+    {
+      "id": "vanilla-frosted",
+      "name": "Vanilla-Frosted Doughnut",
+      "description": "This colorful Doughnut is nothing spectacular, but definitely gets the job done.",
+      "price": 2.20,
+      "url": "media/vanilla.jpg"
+    },
+    {
+      "id": "cheap-cheerful",
+      "name": "Cheap-Cheerful Doughnut",
+      "description": "There was one vocal hater of this Doughnut, but most of us thought this was the best of the filled-Doughnut category. It definitely gives you the chocolate-custardy flavor of the classic Beantown dessert.",
+      "price": 0.50,
+      "url": "media/boston.jpg"
+    }
+  ]
+}
