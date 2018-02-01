@@ -16,9 +16,11 @@ const Item = ({ name, description, imageUrl, price, id, addToCart }) => (
 
     <Image src={`/${imageUrl}`} />
 
-    <Link to={`/doughnut/${id}`}>
-      <Button>View Details</Button>
-    </Link>
+    {id && (
+      <Link to={`/doughnut/${id}`}>
+        <Button>View Details</Button>
+      </Link>
+    )}
 
     <Button onClick={() => addToCart(id)}>Add to Cart</Button>
   </Container>
