@@ -1,8 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { actions } from 'ducks/cart'
 
 import { Container, Name, Description, Price, Image, Button } from './styles'
 
-const Item = ({ name, description, imageUrl, price, id }) => (
+const Item = ({ name, description, imageUrl, price, id, addToCart }) => (
   <Container>
     <Name>{name}</Name>
 
@@ -12,8 +15,12 @@ const Item = ({ name, description, imageUrl, price, id }) => (
 
     <Image src={`/${imageUrl}`} />
 
-    <Button onClick={() => console.log(id)}>Buy</Button>
+    <Button onClick={() => addToCart(id)}>Add to Cart</Button>
   </Container>
 )
 
-export default Item
+const mapDispatchToProps = dispatch => ({
+  addToCart: id => dispatch(actions.add(id))
+})
+
+export default connect(false, mapDispatchToProps)(Item)
