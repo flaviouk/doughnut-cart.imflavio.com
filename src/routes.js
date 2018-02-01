@@ -1,13 +1,16 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import { Home } from 'pages'
+import { Header } from 'components'
 
 const Router = () => (
   <BrowserRouter>
-    <Switch>
+    <div>
+      <Header />
+
       <Route exact path="/" component={Home} />
-    </Switch>
+    </div>
   </BrowserRouter>
 )
 
