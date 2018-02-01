@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import { actions } from 'ducks/doughnuts'
-import { Loading, Error } from 'components'
+import { Loading, Error, Item } from 'components'
 
 class Home extends Component {
   componentDidMount() {
@@ -11,7 +11,7 @@ class Home extends Component {
   }
 
   render() {
-    const { isLoading, error } = this.props
+    const { isLoading, error, data } = this.props
 
     return (
       <div>
@@ -19,7 +19,15 @@ class Home extends Component {
 
         <Error error={error} />
 
-        <h1>Home</h1>
+        {data.map(doughnut => (
+          <Item
+            name={doughnut.name}
+            description={doughnut.description}
+            imageUrl={doughnut.url}
+            price={doughnut.price}
+            key={doughnut.id}
+          />
+        ))}
       </div>
     )
   }
