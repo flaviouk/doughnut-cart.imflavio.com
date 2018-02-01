@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
 import { actions } from 'ducks/doughnuts'
-import { Loading } from 'components'
+import { Loading, Error } from 'components'
 
 class Home extends Component {
   componentDidMount() {
@@ -11,11 +11,13 @@ class Home extends Component {
   }
 
   render() {
-    const { isLoading } = this.props
+    const { isLoading, error } = this.props
 
     return (
       <div>
         <Loading isLoading={isLoading} />
+
+        <Error error={error} />
 
         <h1>Home</h1>
       </div>
