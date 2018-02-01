@@ -24,12 +24,33 @@ export const reducer = (state = initialState, action) => {
       return newCart
     }
     case types.CART_REMOVE: {
-      const oldCart = getLocalStorage('CART')
+      const oldCart = getLocalStorage('CART') || []
 
-      if (oldCart) return oldCart.filter(item => item !== action.id)
-      return []
+      const index = oldCart.indexOf(action.id)
+      oldCart[index] = null
+
+      const newCart = oldCart.filter(item => item)
+
+      setLocalStorage('CART', newCart)
+      return newCart
     }
     default:
       return state
   }
+}
+
+export const savedItemsSelector = cart => {
+  const cartFiltered = cart.filter(doughnut => typeof doughnut === 'string')
+
+  const counter = {}
+
+  cartFiltered.map(id => {
+    if (counter[id]) counter[id] = counter[id] + 1
+    else counter[id] = 1
+  })
+
+  const doughnuts = getLocalStorage('DOUGHNUTS') || []
+  return doughnuts
+    .filter(({ id }) => counter[id])
+    .map(doughnut => Object.assign(doughnut, { counter: counter[doughnut.id] }))
 }

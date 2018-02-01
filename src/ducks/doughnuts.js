@@ -1,3 +1,5 @@
+import { getLocalStorage, setLocalStorage } from 'utils'
+
 const types = {
   DOUGHNUTS_ATTEMPT_LOAD: 'DOUGHNUTS_ATTEMPT_LOAD',
   DOUGHNUTS_LOAD_SUCCESS: 'DOUGHNUTS_LOAD_SUCCESS',
@@ -21,7 +23,7 @@ export const actions = {
 
 const initialState = {
   isLoading: true,
-  data: [],
+  data: getLocalStorage('DOUGHNUTS') || [],
   error: ''
 }
 
@@ -30,6 +32,7 @@ export const reducer = (state = initialState, action) => {
     case types.DOUGHNUTS_ATTEMPT_LOAD:
       return Object.assign(state, { isLoading: true })
     case types.DOUGHNUTS_LOAD_SUCCESS:
+      setLocalStorage('DOUGHNUTS', action.data)
       return { isLoading: false, data: action.data, error: '' }
     case types.DOUGHNUTS_LOAD_FAIL:
       return { isLoading: false, data: state.data, error: action.error.toString() }
