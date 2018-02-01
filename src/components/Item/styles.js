@@ -23,7 +23,7 @@ export const Image = styled.img`
 `
 
 export const Button = styled.button`
-  width: 100px;
+  width: 150px;
   background: #4276da;
   color: white;
 `

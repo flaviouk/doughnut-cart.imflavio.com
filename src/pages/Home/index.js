@@ -22,14 +22,7 @@ class Home extends Component {
         <Error error={error} />
 
         {data.map(({ id, name, description, url, price }) => (
-          <Item
-            id={id}
-            name={name}
-            description={description}
-            imageUrl={url}
-            price={price}
-            key={id}
-          />
+          <Item id={id} name={name} imageUrl={url} price={price} key={id} />
         ))}
       </Container>
     )

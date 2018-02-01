@@ -10,7 +10,9 @@ export const actions = {
   remove: id => ({ type: types.CART_REMOVE, id })
 }
 
-export const reducer = (state = [], action) => {
+const initialState = getLocalStorage('CART') || []
+
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case types.CART_ADD: {
       const oldCart = getLocalStorage('CART')
