@@ -11,7 +11,7 @@ const Header = () => (
 
     <Link to="/cart">
       <Cart>
-        <i className="fas fa-shopping-cart" style={CartIcon} />
+        <CartIcon className="fas fa-shopping-cart" />
 
         <CartCount>0</CartCount>
       </Cart>

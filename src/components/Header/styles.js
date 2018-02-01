@@ -25,8 +25,8 @@ export const CartCount = styled.p`
   margin: 0;
 `
 
-export const CartIcon = {
-  fontSize: '30px',
-  color: 'white',
-  paddingRight: '10px'
-}
+export const CartIcon = styled.i`
+  font-size: 30px;
+  color: white;
+  padding-right: 10px;
+`

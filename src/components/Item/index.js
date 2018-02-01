@@ -1,13 +1,19 @@
 import React from 'react'
 
-const Item = ({ name, description, imageUrl, price }) => (
-  <div>
-    <h1>{name}</h1>
-    <p>{description}</p>
-    <p>{price}</p>
+import { Container, Name, Description, Price, Image, Button } from './styles'
 
-    <img src={`/${imageUrl}`} />
-  </div>
+const Item = ({ name, description, imageUrl, price, id }) => (
+  <Container>
+    <Name>{name}</Name>
+
+    <Description>{description}</Description>
+
+    <Price>${price}</Price>
+
+    <Image src={`/${imageUrl}`} />
+
+    <Button onClick={() => console.log(id)}>Buy</Button>
+  </Container>
 )
 
 export default Item

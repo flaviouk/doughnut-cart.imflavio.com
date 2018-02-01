@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux'
 import { actions } from 'ducks/doughnuts'
 import { Loading, Error, Item } from 'components'
 
+import { Container } from './styles'
+
 class Home extends Component {
   componentDidMount() {
     this.props.attemptLoad()
@@ -14,21 +16,22 @@ class Home extends Component {
     const { isLoading, error, data } = this.props
 
     return (
-      <div>
+      <Container>
         <Loading isLoading={isLoading} />
 
         <Error error={error} />
 
-        {data.map(doughnut => (
+        {data.map(({ id, name, description, url, price }) => (
           <Item
-            name={doughnut.name}
-            description={doughnut.description}
-            imageUrl={doughnut.url}
-            price={doughnut.price}
-            key={doughnut.id}
+            id={id}
+            name={name}
+            description={description}
+            imageUrl={url}
+            price={price}
+            key={id}
           />
         ))}
-      </div>
+      </Container>
     )
   }
 }
