@@ -13,7 +13,7 @@ export const actions = {
 
     // this would ideally be an environment variable
     if (process.env.NODE_ENV === 'production') {
-      dispatch(actions.loadSuccess(data.doughnut))
+      dispatch(actions.loadSuccess(data.doughnuts))
     } else {
       fetch('http://localhost:4000/doughnuts')
         .then(res => res.json().then(data => dispatch(actions.loadSuccess(data))))
