@@ -30,4 +30,7 @@ const mapDispatchToProps = dispatch => ({
   addToCart: id => dispatch(actions.add(id))
 })
 
-export default connect(false, mapDispatchToProps)(Item)
+export default connect(
+  false,
+  mapDispatchToProps
+)(Item)

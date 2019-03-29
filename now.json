@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "name": "doughnut-cart.imflavio.com",
+    "alias": ["doughnut-cart.imflavio.com", "www.doughnut-cart.imflavio.com", "doughnut-cart.flavio.uk", "www.doughnut-cart.flavio.uk"],
+    "regions": ["all"],
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@now/static-build",
+        "config": { "distDir": "build" }
+      }
+    ]
+  }
+  

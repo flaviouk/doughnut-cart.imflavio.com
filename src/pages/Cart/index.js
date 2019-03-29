@@ -21,4 +21,7 @@ const mapStateToProps = ({ cart }) => ({ cart: savedItemsSelector(cart) })
 
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Cart)

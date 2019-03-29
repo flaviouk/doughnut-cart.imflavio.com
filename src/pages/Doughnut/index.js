@@ -5,7 +5,12 @@ import { Item } from 'components'
 
 import { Container } from './styles'
 
-const Doughnut = ({ doughnuts, match: { params: { id } } }) => {
+const Doughnut = ({
+  doughnuts,
+  match: {
+    params: { id }
+  }
+}) => {
   const doughnut = doughnuts.filter(x => x.id === id)[0]
 
   let Component = doughnut ? (

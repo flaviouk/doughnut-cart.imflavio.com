@@ -37,4 +37,7 @@ const mapStateToProps = ({ doughnuts: { isLoading, data, error } }) => ({
 
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home)

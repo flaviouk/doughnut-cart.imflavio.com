@@ -34,4 +34,7 @@ const mapDispatchToProps = dispatch => ({
   removeFromCart: id => dispatch(actions.remove(id))
 })
 
-export default connect(false, mapDispatchToProps)(CartItem)
+export default connect(
+  false,
+  mapDispatchToProps
+)(CartItem)

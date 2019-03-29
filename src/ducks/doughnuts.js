@@ -1,4 +1,5 @@
 import { getLocalStorage, setLocalStorage } from 'utils'
+import data from 'data'
 
 const types = {
   DOUGHNUTS_ATTEMPT_LOAD: 'DOUGHNUTS_ATTEMPT_LOAD',
@@ -11,9 +12,13 @@ export const actions = {
     dispatch({ type: types.DOUGHNUTS_ATTEMPT_LOAD })
 
     // this would ideally be an environment variable
-    fetch('http://localhost:4000/doughnuts')
-      .then(res => res.json().then(data => dispatch(actions.loadSuccess(data))))
-      .catch(actions.loadFail)
+    if (process.env.NODE_ENV === 'production') {
+      dispatch(actions.loadSuccess(data.doughnut))
+    } else {
+      fetch('http://localhost:4000/doughnuts')
+        .then(res => res.json().then(data => dispatch(actions.loadSuccess(data))))
+        .catch(actions.loadFail)
+    }
   },
 
   loadSuccess: data => ({ type: types.DOUGHNUTS_LOAD_SUCCESS, data }),

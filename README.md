@@ -14,11 +14,3 @@ yarn install
 yarn serve:server
 yarn start:client
 ```
-
-## Commits
-
-```
-// Follows conventional-changelog-angular standard
-
-yarn cz
-```
