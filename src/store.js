@@ -11,10 +11,12 @@ const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_
 
 const store = createStore(
   reducers,
-  compose(
-    applyMiddleware(...middleware),
-    devTools
-  )
+  devTools
+    ? compose(
+        applyMiddleware(...middleware),
+        devTools
+      )
+    : applyMiddleware(...middleware)
 )
 
 export default store
